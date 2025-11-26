@@ -8,10 +8,6 @@ temporal resilience prediction, and adversarial robustness analysis.
 Author: Yoon-Seop Lee
 """
 
-__version__ = '1.0.0'
-__author__ = 'Yoon-Seop Lee'
-__email__ = 'your.email@example.com'
-
 from .advanced_tgnn import AdvancedTemporalGNN, TemporalNodeClassifier, TemporalLinkPredictor
 from .terrorist_network_disruption import (
     MultiLayerTemporalGNN,
