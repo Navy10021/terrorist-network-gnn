@@ -10,13 +10,31 @@ import os
 
 # Read README for long description
 def read_readme():
-    with open('README.md', 'r', encoding='utf-8') as f:
-        return f.read()
+    try:
+        with open('README.md', 'r', encoding='utf-8') as f:
+            return f.read()
+    except FileNotFoundError:
+        return "Terrorist Network GNN - Advanced Temporal Graph Neural Networks"
 
 # Read requirements
 def read_requirements():
-    with open('requirements.txt', 'r', encoding='utf-8') as f:
-        return [line.strip() for line in f if line.strip() and not line.startswith('#')]
+    try:
+        with open('requirements.txt', 'r', encoding='utf-8') as f:
+            return [line.strip() for line in f if line.strip() and not line.startswith('#')]
+    except FileNotFoundError:
+        # Fallback to minimum requirements
+        return [
+            'torch>=2.0.0',
+            'torch-geometric>=2.3.0',
+            'numpy>=1.24.0',
+            'scipy>=1.10.0',
+            'pandas>=2.0.0',
+            'matplotlib>=3.7.0',
+            'seaborn>=0.12.0',
+            'networkx>=3.1',
+            'tqdm>=4.65.0',
+            'scikit-learn>=1.2.0',
+        ]
 
 setup(
     name='terrorist-network-gnn',

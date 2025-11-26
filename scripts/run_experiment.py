@@ -16,12 +16,9 @@ import sys
 import os
 from pathlib import Path
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
-
 import torch
-from main_experiment import EnhancedExperiment
-from terrorist_network_dataset import NetworkConfig
+from src.main_experiment import EnhancedExperiment
+from src.terrorist_network_dataset import NetworkConfig
 
 
 def parse_args():

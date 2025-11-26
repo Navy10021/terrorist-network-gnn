@@ -1,0 +1,28 @@
+# Include important files in source distribution
+include README.md
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+include pytest.ini
+include CONTRIBUTING.md
+include QUICKSTART.md
+include PROJECT_STRUCTURE.md
+include PACKAGE_CONTENTS.md
+
+# Include documentation
+recursive-include docs *.md *.rst
+
+# Include tests
+recursive-include tests *.py
+
+# Include scripts
+recursive-include scripts *.py
+
+# Include notebooks
+recursive-include notebooks *.ipynb
+
+# Exclude compiled files
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.so
+global-exclude .DS_Store

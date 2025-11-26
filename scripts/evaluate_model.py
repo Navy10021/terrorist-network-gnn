@@ -18,16 +18,14 @@ from pathlib import Path
 import json
 from datetime import datetime
 
-sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
-
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from terrorist_network_disruption import MultiLayerTemporalGNN, CriticalNodeDetector
-from terrorist_network_dataset import TerroristNetworkGenerator, NetworkConfig, DisruptionEvaluator
-from statistical_analysis import StatisticalAnalyzer, ResultVisualizer
+from src.terrorist_network_disruption import MultiLayerTemporalGNN, CriticalNodeDetector
+from src.terrorist_network_dataset import TerroristNetworkGenerator, NetworkConfig, DisruptionEvaluator
+from src.statistical_analysis import StatisticalAnalyzer, ResultVisualizer
 
 
 def parse_args():

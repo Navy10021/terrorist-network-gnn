@@ -19,7 +19,7 @@ from dataclasses import dataclass
 import random
 from collections import defaultdict
 
-from terrorist_network_disruption import (
+from .terrorist_network_disruption import (
     NetworkLayer,
     MultiLayerTemporalNetwork,
     CriticalNodeDetector,
