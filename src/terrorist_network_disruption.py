@@ -26,7 +26,7 @@ import networkx as nx
 from scipy.stats import entropy
 from dataclasses import dataclass
 
-from advanced_tgnn import AdvancedTemporalGNN
+from .advanced_tgnn import AdvancedTemporalGNN
 
 
 # ============================================================================
