@@ -1,4 +1,4 @@
-# Terrorist Network Disruption using Temporal Graph Neural Networks
+# 🕸️⚡ Temporal GNN for Terrorist Network Disruption
 
 <div align="center">
 
