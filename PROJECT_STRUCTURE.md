@@ -279,8 +279,3 @@ To add a new feature:
 - Follow existing code style
 
 ---
-
-For more information, see:
-- [Contributing Guidelines](CONTRIBUTING.md)
-- [Architecture Documentation](docs/architecture.md)
-- [API Reference](docs/api_reference.md)
