@@ -2,15 +2,13 @@
 
 <div align="center">
 
-![Project Banner](assets/banner.png)
-
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![arXiv](https://img.shields.io/badge/arXiv-2024.xxxxx-b31b1b.svg)](https://arxiv.org/)
 
-[![Tests](https://github.com/Navy10021/terrorist-network-gnn/workflows/Tests/badge.svg)](https://github.com/Navy10021/terrorist-network-gnn/actions)
+(https://github.com/Navy10021/terrorist-network-gnn/actions)
 [![codecov](https://codecov.io/gh/Navy10021/terrorist-network-gnn/branch/main/graph/badge.svg)](https://codecov.io/gh/Navy10021/terrorist-network-gnn)
 [![Documentation Status](https://readthedocs.org/projects/terrorist-network-gnn/badge/?version=latest)](https://terrorist-network-gnn.readthedocs.io/)
 
