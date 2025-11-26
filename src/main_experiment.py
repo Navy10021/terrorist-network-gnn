@@ -30,26 +30,26 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Import our modules
-from advanced_tgnn import AdvancedTemporalGNN
-from terrorist_network_disruption import (
+from .advanced_tgnn import AdvancedTemporalGNN
+from .terrorist_network_disruption import (
     MultiLayerTemporalGNN,
     CriticalNodeDetector,
     NetworkDisruptionOptimizer,
     TemporalResiliencePredictor,
     AdversarialNetworkAttack
 )
-from terrorist_network_dataset import (
+from .terrorist_network_dataset import (
     TerroristNetworkGenerator,
     NetworkConfig,
     DisruptionEvaluator
 )
-from training import TemporalGNNTrainer
-from baselines import (
+from .training import TemporalGNNTrainer
+from .baselines import (
     StaticGCN, StaticGAT, StaticGraphSAGE,
     SimpleTemporalGNN, BaselineEvaluator
 )
-from statistical_analysis import StatisticalAnalyzer, ResultVisualizer
-from ablation_study import AblationStudy
+from .statistical_analysis import StatisticalAnalyzer, ResultVisualizer
+from .ablation_study import AblationStudy
 
 
 class EnhancedExperiment:
