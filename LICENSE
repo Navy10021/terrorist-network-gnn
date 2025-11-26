@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Yoon-seop Lee
+Copyright (c) 2024 Yoon-Seop Lee
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,28 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+ADDITIONAL TERMS FOR RESPONSIBLE USE
+
+This software is intended for defensive security research and academic purposes.
+Users of this software agree to:
+
+1. Use the software only for legitimate research, educational, or defensive
+   security purposes.
+
+2. Not use the software to harm individuals, organizations, or society.
+
+3. Comply with all applicable laws and regulations in their jurisdiction.
+
+4. Consider the ethical implications of network disruption research.
+
+5. Follow responsible disclosure practices for any security findings.
+
+6. Not apply the techniques to real-world networks without proper authorization
+   and ethical oversight.
+
+The authors and contributors of this software are not responsible for any misuse
+or harm resulting from the use of this software. This software is provided for
+research and educational purposes only.
