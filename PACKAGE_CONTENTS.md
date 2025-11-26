@@ -222,7 +222,7 @@ See LICENSE file for full details.
 ---
 
 **Package Version**: 1.0.0  
-**Generated**: 2024-11-26  
+**Generated**: 2025-11-26  
 **Ready for**: GitHub upload, local development, research publication
 
 Enjoy your research! 🚀
