@@ -62,11 +62,11 @@ class TestTerroristNetworkGenerator:
 
         # Check that each snapshot has the required layers
         for snapshot in network.snapshots:
-            assert hasattr(snapshot, 'physical')
-            assert hasattr(snapshot, 'communication')
-            assert hasattr(snapshot, 'financial')
-            assert hasattr(snapshot, 'ideological')
-            assert hasattr(snapshot, 'operational')
+            assert hasattr(snapshot, "physical")
+            assert hasattr(snapshot, "communication")
+            assert hasattr(snapshot, "financial")
+            assert hasattr(snapshot, "ideological")
+            assert hasattr(snapshot, "operational")
 
     def test_node_features(self, generator):
         """Test that nodes have correct feature dimensions"""
@@ -94,7 +94,7 @@ class TestTerroristNetworkGenerator:
         # Check that nodes don't disappear suddenly (allowing for dropout)
         for i in range(len(num_nodes) - 1):
             # Allow some dropout but not drastic changes
-            assert abs(num_nodes[i+1] - num_nodes[i]) <= 10
+            assert abs(num_nodes[i + 1] - num_nodes[i]) <= 10
 
 
 class TestMultiLayerTemporalNetwork:
@@ -105,8 +105,8 @@ class TestMultiLayerTemporalNetwork:
         generator = TerroristNetworkGenerator(network_config)
         network = generator.generate_temporal_network(3)
 
-        assert hasattr(network, 'snapshots')
-        assert hasattr(network, 'timestamps')
+        assert hasattr(network, "snapshots")
+        assert hasattr(network, "timestamps")
         assert len(network.snapshots) == 3
 
     def test_to_pytorch_geometric(self, network_config):

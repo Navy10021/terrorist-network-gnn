@@ -66,12 +66,14 @@ def sample_temporal_data():
         edge_attr = torch.randn(batch_size, num_edges, num_edge_features)
         timestamps = torch.tensor([t] * batch_size).float()
 
-        temporal_graphs.append({
-            "node_features": node_features,
-            "edge_index": edge_index,
-            "edge_attr": edge_attr,
-            "timestamps": timestamps,
-        })
+        temporal_graphs.append(
+            {
+                "node_features": node_features,
+                "edge_index": edge_index,
+                "edge_attr": edge_attr,
+                "timestamps": timestamps,
+            }
+        )
 
     return temporal_graphs
 
@@ -117,6 +119,4 @@ def pytest_configure(config):
     config.addinivalue_line(
         "markers", "gpu: marks tests that require GPU (deselect with '-m \"not gpu\"')"
     )
-    config.addinivalue_line(
-        "markers", "integration: marks tests as integration tests"
-    )
+    config.addinivalue_line("markers", "integration: marks tests as integration tests")
