@@ -48,7 +48,7 @@ python -c "import torch_geometric; print('PyG installed successfully')"
 
 ### Option 1: Interactive Notebook (Easiest)
 
-1. Open `examples/terrorist_network_gnn_demo.ipynb`
+1. Open `notebooks/terrorist_network_gnn_demo.ipynb`
 2. Run cells sequentially
 3. Results saved to `results/` directory
 
