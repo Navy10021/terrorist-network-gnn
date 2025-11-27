@@ -713,25 +713,6 @@ furnished to do so, subject to the following conditions:
 
 ---
 
-## 🔄 Version History
-
-### v1.0.0 (November 2025)
-- ✅ Initial public release
-- ✅ Complete T-GNN implementation with all components
-- ✅ 12 baseline comparison methods
-- ✅ Statistical validation framework
-- ✅ Publication-ready visualization
-- ✅ Comprehensive documentation
-
-### Roadmap for v1.1.0
-- 🔜 Real-time network analysis
-- 🔜 Distributed training support
-- 🔜 Web interface for visualization
-- 🔜 Additional baseline methods
-- 🔜 Pre-trained model checkpoints
-
----
-
 ## 📊 Project Status
 
 ![Status](https://img.shields.io/badge/Status-Production_Ready-success)
