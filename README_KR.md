@@ -72,7 +72,7 @@ pip install -r requirements.txt
 
 #### 옵션 1: Google Colab (초보자 권장)
 
-1. `examples/terrorist_network_gnn_demo.ipynb`을 Colab에서 열기
+1. `notebooks/terrorist_network_gnn_demo.ipynb`을 Colab에서 열기
 2. **런타임** → **런타임 유형 변경** → **GPU** 선택
 3. 셀을 순차적으로 실행
 
