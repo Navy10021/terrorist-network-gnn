@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  # Development environment
+  dev:
+    build:
+      context: .
+      target: development
+    container_name: tgnn-dev
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./logs:/app/logs
+      - ./models:/app/models
+    environment:
+      - PYTHONPATH=/app
+    command: bash
+    stdin_open: true
+    tty: true
+
+  # Testing environment
+  test:
+    build:
+      context: .
+      target: development
+    container_name: tgnn-test
+    volumes:
+      - .:/app
+    command: pytest tests/ -v --cov=src --cov-report=html
+
+  # Jupyter notebook
+  jupyter:
+    build:
+      context: .
+      target: development
+    container_name: tgnn-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./notebooks:/app/notebooks
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+
+  # Production environment
+  prod:
+    build:
+      context: .
+      target: production
+    container_name: tgnn-prod
+    volumes:
+      - ./data:/app/data:ro
+      - ./results:/app/results
+      - ./models:/app/models
+    environment:
+      - PYTHONPATH=/app
+    command: python -m src.main_experiment
