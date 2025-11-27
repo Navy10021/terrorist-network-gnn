@@ -239,5 +239,5 @@ results/ (outputs)
 
 ---
 
-**Last Updated**: November 27, 2025  
-**Project Version**: v1.0.0
+**Last Updated**: November 30, 2025  
+**Project Version**: v2.0.0
