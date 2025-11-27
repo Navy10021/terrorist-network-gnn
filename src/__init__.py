@@ -29,7 +29,7 @@ __author__ = "Yoon-seop Lee"
 __email__ = "iyunseob4@gmail.com"
 
 from .ablation_study import (
-    AblationExperiment,
+    AblationStudy,
     run_ablation_study,
 )
 from .advanced_tgnn import (
@@ -103,7 +103,7 @@ __all__ = [
     "compute_effect_size",
     "run_statistical_tests",
     # Ablation study
-    "AblationExperiment",
+    "AblationStudy",
     "run_ablation_study",
     # Main experiment
     "EnhancedExperiment",
