@@ -154,7 +154,7 @@ terrorist-network-tgnn/
 │   ├── statistical_analysis.py             # 통계 검정
 │   ├── ablation_study.py                   # 구성 요소 분석
 │   └── main_experiment.py                  # 완전한 파이프라인
-├── examples/                               # 사용 예제
+├── notebooks/                               # 사용 예제
 │   └── terrorist_network_gnn_demo.ipynb    # 대화형 데모
 ├── tests/                                  # 단위 테스트
 ├── docs/                                   # 문서
