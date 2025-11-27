@@ -53,10 +53,10 @@ class TestAdvancedTemporalGNN:
     def test_forward_pass(self, model, sample_data):
         """Test forward pass produces correct output shape"""
         node_features, edge_index, edge_attr, timestamps = sample_data
-        
+
         # Forward pass
         output = model(node_features, edge_index, edge_attr, timestamps)
-        
+
         # Check output shape
         batch_size, num_nodes = node_features.shape[:2]
         assert output.shape == (batch_size, num_nodes, 128)
@@ -64,23 +64,23 @@ class TestAdvancedTemporalGNN:
     def test_no_nan_in_output(self, model, sample_data):
         """Test that forward pass doesn't produce NaN values"""
         node_features, edge_index, edge_attr, timestamps = sample_data
-        
+
         output = model(node_features, edge_index, edge_attr, timestamps)
-        
+
         assert not torch.isnan(output).any()
         assert not torch.isinf(output).any()
 
     def test_gradient_flow(self, model, sample_data):
         """Test that gradients flow properly"""
         node_features, edge_index, edge_attr, timestamps = sample_data
-        
+
         # Forward pass
         output = model(node_features, edge_index, edge_attr, timestamps)
-        
+
         # Dummy loss
         loss = output.sum()
         loss.backward()
-        
+
         # Check that parameters have gradients
         for param in model.parameters():
             if param.requires_grad:
@@ -93,7 +93,7 @@ class TestAdvancedTemporalGNN:
             edge_index = torch.randint(0, 10, (batch_size, 2, 15))
             edge_attr = torch.randn(batch_size, 15, 32)
             timestamps = torch.arange(batch_size).float()
-            
+
             output = model(node_features, edge_index, edge_attr, timestamps)
             assert output.shape == (batch_size, 10, 128)
 
@@ -120,12 +120,12 @@ class TestHierarchicalTemporalPooling:
         batch_size = 2
         seq_len = 10
         hidden_dim = 128
-        
+
         temporal_states = torch.randn(batch_size, seq_len, hidden_dim)
-        
+
         # Apply pooling
         output = pooling(temporal_states)
-        
+
         # Check output
         assert output.shape == (batch_size, hidden_dim)
         assert not torch.isnan(output).any()
@@ -153,13 +153,13 @@ class TestEnhancedTemporalMemoryBank:
         key = torch.randn(1, 128)
         value = torch.randn(1, 128)
         timestamp = 0
-        
+
         memory_bank.store(key, value, timestamp)
-        
+
         # Retrieve memory
         query = key
         retrieved = memory_bank.retrieve(query, k=1)
-        
+
         assert retrieved.shape == (1, 128)
 
     def test_lru_eviction(self, memory_bank):
@@ -169,7 +169,7 @@ class TestEnhancedTemporalMemoryBank:
             key = torch.randn(1, 128)
             value = torch.randn(1, 128)
             memory_bank.store(key, value, timestamp=i)
-        
+
         # Check memory size is capped
         assert len(memory_bank.keys) <= 100
 
@@ -189,9 +189,9 @@ class TestAdaptiveTimeEncoding:
     def test_encoding_forward(self, time_encoder):
         """Test time encoding forward pass"""
         timestamps = torch.tensor([0.0, 1.0, 2.0, 5.0, 10.0])
-        
+
         encoding = time_encoder(timestamps)
-        
+
         assert encoding.shape == (5, 128)
         assert not torch.isnan(encoding).any()
 
@@ -199,10 +199,10 @@ class TestAdaptiveTimeEncoding:
         """Test encoding produces different outputs for different times"""
         t1 = torch.tensor([0.0])
         t2 = torch.tensor([10.0])
-        
+
         enc1 = time_encoder(t1)
         enc2 = time_encoder(t2)
-        
+
         # Encodings should be different
         assert not torch.allclose(enc1, enc2)
 

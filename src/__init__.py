@@ -18,7 +18,7 @@ Main modules:
 Example usage:
     >>> from terrorist_network_dataset import NetworkConfig, TerroristNetworkGenerator
     >>> from terrorist_network_disruption import MultiLayerTemporalGNN
-    >>> 
+    >>>
     >>> config = NetworkConfig(initial_nodes=50, max_nodes=80)
     >>> generator = TerroristNetworkGenerator(config)
     >>> network = generator.generate_temporal_network(num_timesteps=20)
@@ -85,40 +85,33 @@ __all__ = [
     "HierarchicalTemporalPooling",
     "EnhancedTemporalMemoryBank",
     "AdaptiveTimeEncoding",
-    
     # Disruption analysis
     "MultiLayerTemporalGNN",
     "EnhancedCriticalNodeDetector",
     "TemporalResiliencePredictor",
     "AdversarialNetworkAttack",
     "NetworkDisruptionOptimizer",
-    
     # Dataset
     "TerroristNetworkGenerator",
     "NetworkConfig",
     "NetworkAugmenter",
     "DisruptionEvaluator",
     "MultiLayerTemporalNetwork",
-    
     # Training
     "EnhancedTemporalGNNTrainer",
     "TemporalAutoencoderLoss",
     "GraphReconstructionLoss",
-    
     # Baselines
     "BaselineMethod",
     "compute_centrality",
     "run_baseline_comparison",
-    
     # Statistical analysis
     "StatisticalValidator",
     "compute_effect_size",
     "run_statistical_tests",
-    
     # Ablation study
     "AblationExperiment",
     "run_ablation_study",
-    
     # Main experiment
     "EnhancedExperiment",
     "ExperimentConfig",

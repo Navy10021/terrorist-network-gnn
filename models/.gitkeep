@@ -1,0 +1,4 @@
+# This directory stores trained model checkpoints
+# - Model weights
+# - Optimizer states
+# - Best model checkpoints
