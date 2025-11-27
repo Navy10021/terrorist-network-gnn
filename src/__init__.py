@@ -24,31 +24,47 @@ Example usage:
     >>> network = generator.generate_temporal_network(num_timesteps=20)
 """
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 __author__ = "Yoon-seop Lee"
 __email__ = "iyunseob4@gmail.com"
 
+
+# --------------------------------------------------------
+# Import actual modules (project reality 기반)
+# --------------------------------------------------------
+
+# --- Ablation ---
 from .ablation_study import AblationStudy
+
+# --- Core Temporal GNN architecture ---
 from .advanced_tgnn import (
     AdaptiveTimeEncoding,
     AdvancedTemporalGNN,
     EnhancedTemporalMemoryBank,
     HierarchicalTemporalPooling,
 )
-#from .baselines import (
-#    BaselineMethod,
-#    compute_centrality,
-#    run_baseline_comparison,
-#)
-from .main_experiment import (
-    EnhancedExperiment,
-    ExperimentConfig,
+
+# --- Baselines (정확한 실제 클래스만 포함) ---
+from .baselines import (
+    StaticGCN,
+    StaticGAT,
+    StaticGraphSAGE,
+    DynamicGCN,
+    EvolveGCN,
+    SimpleTemporalGNN,
+    BaselineEvaluator,
 )
+
+# --- Main Experiment (실제로 존재하는 클래스) ---
+from .main_experiment import TemporalGNNExperiment
+
+# --- Statistical analysis ---
 from .statistical_analysis import (
-    StatisticalValidator,
-    compute_effect_size,
-    run_statistical_tests,
+    StatisticalAnalyzer,
+    ResultVisualizer,
 )
+
+# --- Dataset & network generation ---
 from .terrorist_network_dataset import (
     DisruptionEvaluator,
     MultiLayerTemporalNetwork,
@@ -56,6 +72,8 @@ from .terrorist_network_dataset import (
     NetworkConfig,
     TerroristNetworkGenerator,
 )
+
+# --- Disruption, adversarial analysis, resilience prediction ---
 from .terrorist_network_disruption import (
     AdversarialNetworkAttack,
     EnhancedCriticalNodeDetector,
@@ -63,45 +81,62 @@ from .terrorist_network_disruption import (
     NetworkDisruptionOptimizer,
     TemporalResiliencePredictor,
 )
+
+# --- Training ---
 from .training import (
     EnhancedTemporalGNNTrainer,
     GraphReconstructionLoss,
     TemporalAutoencoderLoss,
 )
 
+
+# --------------------------------------------------------
+# Public API
+# --------------------------------------------------------
+
 __all__ = [
+
     # Core architecture
     "AdvancedTemporalGNN",
     "HierarchicalTemporalPooling",
     "EnhancedTemporalMemoryBank",
     "AdaptiveTimeEncoding",
-    # Disruption analysis
+
+    # Disruption & robustness
     "MultiLayerTemporalGNN",
     "EnhancedCriticalNodeDetector",
     "TemporalResiliencePredictor",
     "AdversarialNetworkAttack",
     "NetworkDisruptionOptimizer",
-    # Dataset
+
+    # Dataset & generation
     "TerroristNetworkGenerator",
     "NetworkConfig",
     "NetworkAugmenter",
     "DisruptionEvaluator",
     "MultiLayerTemporalNetwork",
+
     # Training
     "EnhancedTemporalGNNTrainer",
     "TemporalAutoencoderLoss",
     "GraphReconstructionLoss",
+
     # Baselines
-    "BaselineMethod",
-    "compute_centrality",
-    "run_baseline_comparison",
+    "StaticGCN",
+    "StaticGAT",
+    "StaticGraphSAGE",
+    "DynamicGCN",
+    "EvolveGCN",
+    "SimpleTemporalGNN",
+    "BaselineEvaluator",
+
     # Statistical analysis
-    "StatisticalValidator",
-    "compute_effect_size",
-    "run_statistical_tests",
-    # Ablation study
+    "StatisticalAnalyzer",
+    "ResultVisualizer",
+
+    # Ablation
     "AblationStudy",
-    # Main experiment
-    "EnhancedExperiment",
-    "ExperimentConfig",
+
+    # Main experiment pipeline
+    "TemporalGNNExperiment",
 ]
