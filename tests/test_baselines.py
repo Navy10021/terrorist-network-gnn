@@ -5,9 +5,10 @@ Unit tests for baselines.py
 import pytest
 import torch
 import torch.nn as nn
+
 from src.baselines import (
-    StaticGCN,
     StaticGAT,
+    StaticGCN,
     StaticGraphSAGE,
 )
 

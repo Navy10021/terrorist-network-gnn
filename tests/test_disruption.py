@@ -2,15 +2,16 @@
 Unit tests for terrorist_network_disruption.py
 """
 
+import numpy as np
 import pytest
 import torch
 import torch.nn as nn
-import numpy as np
+
 from src.terrorist_network_disruption import (
-    NetworkLayer,
-    MultiLayerTemporalNetwork,
-    MultiLayerTemporalGNN,
     EnhancedCriticalNodeDetector,
+    MultiLayerTemporalGNN,
+    MultiLayerTemporalNetwork,
+    NetworkLayer,
 )
 
 

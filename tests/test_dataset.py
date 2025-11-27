@@ -2,13 +2,14 @@
 Unit tests for terrorist_network_dataset.py
 """
 
+import networkx as nx
 import pytest
 import torch
-import networkx as nx
+
 from src.terrorist_network_dataset import (
-    TerroristNetworkGenerator,
-    NetworkConfig,
     MultiLayerTemporalNetwork,
+    NetworkConfig,
+    TerroristNetworkGenerator,
 )
 
 

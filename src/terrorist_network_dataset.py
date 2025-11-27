@@ -12,21 +12,21 @@ Author: Advanced GNN Research
 Version: 2.0
 """
 
-import torch
-import numpy as np
-from typing import List, Dict, Tuple, Optional, Set
-from dataclasses import dataclass
 import random
 from collections import defaultdict
+from dataclasses import dataclass
+from typing import Dict, List, Optional, Set, Tuple
 
-from terrorist_network_disruption import (
-    NetworkLayer,
-    MultiLayerTemporalNetwork,
-    EnhancedCriticalNodeDetector,
-    NetworkDisruptionOptimizer,
+import numpy as np
+import torch
+
+from .terrorist_network_disruption import (
     AdversarialNetworkAttack,
+    EnhancedCriticalNodeDetector,
+    MultiLayerTemporalNetwork,
+    NetworkDisruptionOptimizer,
+    NetworkLayer,
 )
-
 
 # ============================================================================
 # NETWORK DATA AUGMENTATION
