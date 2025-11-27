@@ -28,10 +28,7 @@ __version__ = "1.0.0"
 __author__ = "Yoon-seop Lee"
 __email__ = "iyunseob4@gmail.com"
 
-from .ablation_study import (
-    AblationStudy,
-    run_ablation_study,
-)
+from .ablation_study import AblationStudy
 from .advanced_tgnn import (
     AdaptiveTimeEncoding,
     AdvancedTemporalGNN,
@@ -104,7 +101,6 @@ __all__ = [
     "run_statistical_tests",
     # Ablation study
     "AblationStudy",
-    "run_ablation_study",
     # Main experiment
     "EnhancedExperiment",
     "ExperimentConfig",
