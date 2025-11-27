@@ -12,12 +12,13 @@ Implements:
 Author: Advanced GNN Research
 """
 
-import numpy as np
-from scipy import stats
-from typing import Dict, List, Tuple, Optional
-import matplotlib.pyplot as plt
-import seaborn as sns
 from dataclasses import dataclass
+from typing import Dict, List, Optional, Tuple
+
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from scipy import stats
 
 
 @dataclass

@@ -12,13 +12,14 @@ Systematically evaluates the contribution of each component:
 Author: Advanced GNN Research
 """
 
+import copy
+from typing import Dict, List, Optional
+
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import GCNConv
-import numpy as np
-from typing import Dict, List, Optional
-import copy
 
 
 class AblationStudy:

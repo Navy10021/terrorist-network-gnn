@@ -5,15 +5,16 @@ Unit tests for training.py
 import pytest
 import torch
 import torch.nn as nn
+
+from src.advanced_tgnn import AdvancedTemporalGNN
 from src.training import (
-    TemporalLinkPredictionLoss,
     ContrastiveLoss,
+    EnhancedTemporalGNNTrainer,
+    GraphReconstructionLoss,
     NodeReconstructionLoss,
     TemporalAutoencoderLoss,
-    GraphReconstructionLoss,
-    EnhancedTemporalGNNTrainer,
+    TemporalLinkPredictionLoss,
 )
-from src.advanced_tgnn import AdvancedTemporalGNN
 
 
 class TestTemporalLinkPredictionLoss:

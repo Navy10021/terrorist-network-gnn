@@ -2,10 +2,11 @@
 Pytest configuration and shared fixtures
 """
 
+import random
+
+import numpy as np
 import pytest
 import torch
-import numpy as np
-import random
 
 
 @pytest.fixture(scope="session", autouse=True)

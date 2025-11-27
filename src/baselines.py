@@ -12,15 +12,15 @@ Author: Advanced GNN Research
 Version: 2.0
 """
 
+from collections import defaultdict
+from typing import Dict, List, Optional, Tuple
+
+import networkx as nx
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch_geometric.nn import GCNConv, GATv2Conv, SAGEConv
-import networkx as nx
-import numpy as np
-from typing import List, Dict, Tuple, Optional
-from collections import defaultdict
-
+from torch_geometric.nn import GATv2Conv, GCNConv, SAGEConv
 
 # ============================================================================
 # STATIC GNN BASELINES

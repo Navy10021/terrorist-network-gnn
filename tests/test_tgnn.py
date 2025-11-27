@@ -5,11 +5,12 @@ Unit tests for Advanced Temporal GNN
 import pytest
 import torch
 import torch.nn as nn
+
 from src.advanced_tgnn import (
-    AdvancedTemporalGNN,
-    HierarchicalTemporalPooling,
-    EnhancedTemporalMemoryBank,
     AdaptiveTimeEncoding,
+    AdvancedTemporalGNN,
+    EnhancedTemporalMemoryBank,
+    HierarchicalTemporalPooling,
 )
 
 

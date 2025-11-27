@@ -12,14 +12,15 @@ Author: Advanced GNN Research
 Version: 2.0
 """
 
+import time
+from typing import Dict, List, Optional, Tuple
+
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from typing import Dict, List, Tuple, Optional
-import numpy as np
 from tqdm import tqdm
-import time
 
 
 class TemporalLinkPredictionLoss(nn.Module):

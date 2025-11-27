@@ -12,19 +12,19 @@ Author: Advanced GNN Research
 Version: 2.0
 """
 
+from collections import defaultdict
+from dataclasses import dataclass
+from typing import Any, Dict, List, Optional, Set, Tuple
+
+import networkx as nx
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch_geometric.utils import degree, to_dense_adj, remove_self_loops
-import numpy as np
-from typing import List, Dict, Tuple, Optional, Set, Any
-from collections import defaultdict
-import networkx as nx
 from scipy.stats import entropy
-from dataclasses import dataclass
+from torch_geometric.utils import degree, remove_self_loops, to_dense_adj
 
 from .advanced_tgnn import AdvancedTemporalGNN
-
 
 # ============================================================================
 # MULTI-LAYER NETWORK SUPPORT

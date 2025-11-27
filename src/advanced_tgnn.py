@@ -12,14 +12,15 @@ Author: Advanced GNN Research
 Version: 2.0
 """
 
+import math
+from typing import List, Optional, Tuple
+
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import GATv2Conv, TransformerConv
 from torch_geometric.utils import to_dense_batch
-import math
-import numpy as np
-from typing import Optional, Tuple, List
 
 
 class HierarchicalTemporalPooling(nn.Module):

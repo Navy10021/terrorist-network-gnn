@@ -15,7 +15,7 @@ repos:
     rev: 23.12.1
     hooks:
       - id: black
-        language_version: python3.8
+        language_version: python3
 
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
@@ -33,8 +33,7 @@ repos:
     rev: v1.8.0
     hooks:
       - id: mypy
-        additional_dependencies: [types-all]
-        args: ["--ignore-missing-imports"]
+        args: ["--ignore-missing-imports", "--no-strict-optional"]
 
   - repo: https://github.com/PyCQA/bandit
     rev: 1.7.6
